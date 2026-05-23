@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="kiro.jpg" alt="Kiro" width="220" />
+</p>
+
 # edu-awesome
 
 Educational / tutorial repository for [awesome WM](https://awesomewm.org/), a highly configurable Lua-driven dynamic window manager. Part of the `~/EDU/` learning series — a working awesome config dropped on top of a fresh Arch / Kiro install.
