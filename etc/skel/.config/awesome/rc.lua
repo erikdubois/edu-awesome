@@ -411,8 +411,8 @@ globalkeys = my_table.join(
         {description = scrlocker, group = "alt+ctrl"}),
     awful.key({ modkey1, altkey   }, "l", function() awful.util.spawn( "archlinux-logout" ) end,
         {description = scrlocker, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "o", function() awful.spawn.with_shell("$HOME/.config/awesome/scripts/picom-toggle.sh") end,
-        {description = "Picom toggle", group = "alt+ctrl"}),
+    awful.key({ modkey1, altkey   }, "o", function() awful.spawn.with_shell("$HOME/.config/awesome/scripts/fastcompmgr-toggle.sh") end,
+        {description = "Compositor toggle", group = "alt+ctrl"}),
     awful.key({ modkey1, altkey   }, "s", function() awful.util.spawn( mediaplayer ) end,
         {description = mediaplayer, group = "alt+ctrl"}),
     awful.key({ modkey1, altkey   }, "t", function() awful.util.spawn( terminal ) end,
@@ -1160,4 +1160,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Autostart applications
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
-awful.spawn.with_shell("picom -b --config  $HOME/.config/awesome/picom.conf")
+awful.spawn.with_shell("fastcompmgr -c")
