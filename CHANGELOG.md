@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026.05.26
+
+### What Changed
+- Replaced picom with **fastcompmgr** as the compositor. Boot launch and the toggle now use fastcompmgr, and the compositor-toggle keybind moved to the unified `super + g` (was `super + alt + o`).
+
+### Technical Details
+- `rc.lua`: autostart `picom -b --config $HOME/.config/awesome/picom.conf` → `fastcompmgr -c`; toggle key changed from `{ modkey1, altkey }, "o"` to `{ modkey }, "g"`.
+- `scripts/picom-toggle.sh` renamed to `fastcompmgr-toggle.sh` (simple on/off toggle — fastcompmgr takes no config file).
+- Deleted the now-unused `picom.conf`.
+
+### Files Modified
+- etc/skel/.config/awesome/rc.lua
+- etc/skel/.config/awesome/scripts/fastcompmgr-toggle.sh (created, replaces picom-toggle.sh)
+- etc/skel/.config/awesome/scripts/picom-toggle.sh (deleted)
+- etc/skel/.config/awesome/picom.conf (deleted)
+
 ## 2026.05.21
 
 ### What Changed
